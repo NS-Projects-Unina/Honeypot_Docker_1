@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+  ssh_honeypot:
+    image: cowrie/cowrie:latest
+    container_name: ssh_honeypot
+    ports:
+      - "2222:2222"
+    volumes:
+      - ./configs/cowrie:/etc/cowrie
+      - ./logs/cowrie:/var/log/cowrie
+    restart: always
+
+  http_honeypot:
+    image: dtagdevsec/glastopf
+    container_name: http_honeypot
+    ports:
+      - "8080:80"
+    volumes:
+      - ./configs/glastopf:/etc/glastopf
+      - ./logs/glastopf:/var/log/glastopf
+
+  db_honeypot:
+    image: honeydb/db
+    container_name: db_honeypot
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./configs/mysql:/etc/mysql
+      - ./logs/mysql:/var/log/mysql
+
+  logging:
+    image: sebp/elk
+    container_name: elk
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+    volumes:
+      - ./configs/logstash:/etc/logstash
+      - ./logs:/var/log/elk
