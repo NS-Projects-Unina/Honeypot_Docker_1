@@ -1,4 +1,4 @@
-# Disabilita l'accesso root
+# Abilita/Disabilita l'accesso root
 PermitRootLogin no
 
 # Usa solo l'autenticazione tramite password
@@ -16,3 +16,6 @@ Banner /etc/ssh/ssh_banner
 # Imposta altre opzioni di sicurezza
 MaxAuthTries 3
 PermitEmptyPasswords no
+
+# Imposta il livello di logging a DEBUG (più dettagliato, VERBOSE è ancora piu dettagliato)
+LogLevel DEBUG

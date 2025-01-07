@@ -18,11 +18,33 @@ COPY /config/ssh/sshd_config /etc/ssh/sshd_config
 # Copia il banner SSH
 COPY /config/ssh/ssh_banner /etc/ssh/ssh_banner
 
-# Copia lo script di creazione degli utenti, va creato uno script che legga il file users.txt e crei gli utenti
+# Copia lo script di creazione degli utenti
 COPY /config/ssh/users.txt /etc/ssh/users.txt
 
-# Crea admin e imposta la password
-RUN useradd -m admin && echo "admin:pass" | chpasswd
+## SEZIONE LOGGING
+# Crea il file di log
+#RUN touch /var/log/ssh_honeypot.log && chown root:root /var/log/ssh_honeypot.log
 
+# Copia lo script di monitoraggio
+#COPY scripts/ssh/monitor_user_activity.sh /usr/local/bin/monitor_user_activity.sh
+
+# Rendi lo script eseguibile
+#RUN chmod +x /usr/local/bin/monitor_user_activity.sh
+
+# Avvia lo script di monitoraggio quando un utente accede via SSH
+#ENTRYPOINT ["/usr/local/bin/monitor_user_activity.sh"]
+## FINE SEZIONE LOGGING
+
+# Crea gli utenti a partire dal file users.txt (non funziona)
+RUN while IFS=: read -r user pass; do \
+    if ! useradd -m "$user"; then \
+        exit 1; \
+    fi; \
+    if ! echo "$user:$pass" | chpasswd; then \
+        exit 1; \
+    fi; \
+done < /etc/ssh/users.txt
+
+RUN useradd -m admin1 && echo "admin1:pass1" | chpasswd
 # Imposta il comando per avviare il server SSH
 CMD ["/usr/sbin/sshd", "-D"]
