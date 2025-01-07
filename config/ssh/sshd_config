@@ -1,0 +1,18 @@
+# Disabilita l'accesso root
+PermitRootLogin no
+
+# Usa solo l'autenticazione tramite password
+PasswordAuthentication yes
+
+# Disabilita l'autenticazione tramite chiavi pubbliche
+PubkeyAuthentication no
+
+# Disabilita l'autenticazione tramite agenti
+UsePAM no
+
+# Imposta il banner di accesso
+Banner /etc/ssh/ssh_banner
+
+# Imposta altre opzioni di sicurezza
+MaxAuthTries 3
+PermitEmptyPasswords no
