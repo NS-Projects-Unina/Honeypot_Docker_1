@@ -8,6 +8,7 @@ services:
       - ./config/ssh/users.txt:/etc/ssh/users.txt
       - ./config/ssh/sshd_config:/etc/ssh/sshd_config
       - ./config/ssh/ssh_banner:/etc/ssh/ssh_banner
+      - ./config/ssh/rsyslog.conf:/etc/rsyslog.conf
       - ./logs:/var/log  # Persistenza dei log
     restart: always
     environment:
