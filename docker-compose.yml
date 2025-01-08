@@ -8,7 +8,7 @@ services:
       - ./config/ssh/users.txt:/etc/ssh/users.txt
       - ./config/ssh/sshd_config:/etc/ssh/sshd_config
       - ./config/ssh/ssh_banner:/etc/ssh/ssh_banner
-      - ./scripts/ssh/monitor_user_activity.sh:/usr/local/bin/monitor_user_activity.sh
+      - ./logs:/var/log  # Persistenza dei log
     restart: always
     environment:
       - SSH_PASSWORD_AUTH=yes

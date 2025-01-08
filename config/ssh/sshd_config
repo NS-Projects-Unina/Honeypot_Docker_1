@@ -17,5 +17,5 @@ Banner /etc/ssh/ssh_banner
 MaxAuthTries 3
 PermitEmptyPasswords no
 
-# Imposta il livello di logging a DEBUG (più dettagliato, VERBOSE è ancora piu dettagliato)
-LogLevel DEBUG
+# Imposta il livello di logging
+LogLevel VERBOSE
