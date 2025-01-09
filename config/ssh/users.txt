@@ -1,3 +1,0 @@
-admin:pass
-user:user123
-test:test123

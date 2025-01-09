@@ -1,15 +1,12 @@
 services:
-  ssh-honeypot:
-    build: .
-    ports:
-      - "22:22"
-    container_name: ssh_honeypot
+  cowrie:
+    image: cowrie/cowrie
     volumes:
-      - ./config/ssh/users.txt:/etc/ssh/users.txt
-      - ./config/ssh/sshd_config:/etc/ssh/sshd_config
-      - ./config/ssh/ssh_banner:/etc/ssh/ssh_banner
-      - ./config/ssh/rsyslog.conf:/etc/rsyslog.conf
-      - ./logs:/var/log  # Persistenza dei log
-    restart: always
-    environment:
-      - SSH_PASSWORD_AUTH=yes
+      - ./logs/ssh:/cowrie/cowrie-git/var/lib/cowrie/tty/
+      - ./config/ssh/files:/cowrie/cowrie-git/var/lib/cowrie/downloads/
+      - ./logs/ssh/cowrie.json:/cowrie/cowrie-git/var/log/cowrie/cowrie.json
+      - ./logs/ssh/cowrie.log:/cowrie/cowrie-git/var/log/cowrie/cowrie.log
+      - ./config/ssh/ssh_banner:/cowrie/cowrie-git/honeyfs/etc/motd
+      - ./config/ssh:/var/lib/cowrie/tty
+    ports:
+      - 2222:2222 # Settare a 22 per ingannare attaccante (modificare un eventuale SSH per evitare conflitti)
