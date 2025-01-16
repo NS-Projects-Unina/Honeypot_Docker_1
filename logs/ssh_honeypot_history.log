@@ -1,0 +1,14 @@
+admin1:[2025-01-16 17:09:15]
+admin1:[2025-01-16 17:09:16] User connected, IP(172.22.0.1), Port(56790)
+admin1:[2025-01-16 17:09:17] ciao
+admin1:[2025-01-16 17:09:31] ora logghero con root e scrivero qualcosa
+admin1:[2025-01-16 17:09:33] User disconnected, IP(172.22.0.1), Port(56790)
+root:[2025-01-16 17:09:38]
+root:[2025-01-16 17:09:38] User connected, IP(172.22.0.1), Port(58088)
+root:[2025-01-16 17:09:39] qualcosa
+root:[2025-01-16 17:09:56] posso anche tenere traccia di 2+ connessioni contemporaneamente
+admin1:[2025-01-16 17:10:39]
+admin1:[2025-01-16 17:10:39] User connected, IP(172.22.0.1), Port(45406)
+admin1:[2025-01-16 17:10:44] ciao ancora
+admin1:[2025-01-16 17:10:45] User disconnected, IP(172.22.0.1), Port(45406)
+root:[2025-01-16 17:10:48] User disconnected, IP(172.22.0.1), Port(58088)

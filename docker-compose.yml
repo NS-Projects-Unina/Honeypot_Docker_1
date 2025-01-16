@@ -6,6 +6,7 @@ services:
     container_name: ssh_vuln
     volumes:
       - ./config/ssh/banner.txt:/etc/ssh/banner.txt
+      - ./config/ssh/bash_wrapper.sh:/bin/bash_wrapper.sh
       - ./logs:/var/log 
     restart: always
     networks:

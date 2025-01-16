@@ -1,2 +1,1 @@
-Jan  9 17:17:36 997ec5b7f134 rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
-Jan  9 17:25:20 5f27cb7706b6 rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+Jan 16 17:09:08 6370528ccfad rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
