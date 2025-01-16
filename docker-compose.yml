@@ -11,34 +11,6 @@ services:
     networks:
       - honeynet
 
-  web_vuln:
-    image: vulnerables/web-dvwa  # Web app vulnerabile
-    container_name: web_vuln
-    ports:
-      - "8080:80"
-    networks:
-      - honeynet
-
-  db_vuln:
-    image: mysql:5.7  # TODO configurazioni vulnerabili
-    container_name: db_vuln
-    environment:
-      MYSQL_ROOT_PASSWORD: weakpassword
-    ports:
-      - "3306:3306"
-    networks:
-      - honeynet
-
-  logging:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
-    container_name: elasticsearch
-    environment:
-      - discovery.type=single-node
-    ports:
-      - "9200:9200"
-    networks:
-      - honeynet
-
 networks:
   honeynet:
     driver: bridge

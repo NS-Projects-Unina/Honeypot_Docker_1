@@ -6,6 +6,17 @@ RUN apt-get update && \
     apt-get install -y openssh-server rsyslog && \
     apt-get clean
 
+
+# Forse risolve un errore (?)
+RUN apt-get install -y locales && \
+locale-gen en_US.UTF-8 && \
+echo "LANG=en_US.UTF-8" > /etc/default/locale
+
+# Forse risolve un altro errore (?)
+RUN touch /var/log/lastlog
+
+
+
 # Crea una directory per l'host SSH
 RUN mkdir /var/run/sshd
 
