@@ -1,14 +1,21 @@
-admin1:[2025-01-16 17:09:15]
-admin1:[2025-01-16 17:09:16] User connected, IP(172.22.0.1), Port(56790)
-admin1:[2025-01-16 17:09:17] ciao
-admin1:[2025-01-16 17:09:31] ora logghero con root e scrivero qualcosa
-admin1:[2025-01-16 17:09:33] User disconnected, IP(172.22.0.1), Port(56790)
-root:[2025-01-16 17:09:38]
-root:[2025-01-16 17:09:38] User connected, IP(172.22.0.1), Port(58088)
-root:[2025-01-16 17:09:39] qualcosa
-root:[2025-01-16 17:09:56] posso anche tenere traccia di 2+ connessioni contemporaneamente
-admin1:[2025-01-16 17:10:39]
-admin1:[2025-01-16 17:10:39] User connected, IP(172.22.0.1), Port(45406)
-admin1:[2025-01-16 17:10:44] ciao ancora
-admin1:[2025-01-16 17:10:45] User disconnected, IP(172.22.0.1), Port(45406)
-root:[2025-01-16 17:10:48] User disconnected, IP(172.22.0.1), Port(58088)
+root:[2025-01-31 18:26:10] User disconnected, IP(172.20.0.1), Port(48158)
+root:[2025-01-31 18:29:57]
+root:[2025-01-31 18:29:57] User connected, IP(172.20.0.1), Port(39296)
+root:[2025-01-31 18:30:00] test124
+root:[2025-01-31 18:30:02] User disconnected, IP(172.20.0.1), Port(39296)
+root:[2025-01-31 18:34:21]
+root:[2025-01-31 18:34:21] User connected, IP(172.20.0.1), Port(38116)
+root:[2025-01-31 18:34:24] test 1234
+root:[2025-01-31 18:34:26] ciao amici
+root:[2025-01-31 18:34:28] User disconnected, IP(172.20.0.1), Port(38116)
+root:[2025-01-31 18:36:49]
+root:[2025-01-31 18:36:50] User connected, IP(172.20.0.1), Port(36554)
+root:[2025-01-31 18:36:52] pass
+root:[2025-01-31 18:36:57] ennesima prova
+root:[2025-01-31 18:37:00] User disconnected, IP(172.20.0.1), Port(36554)
+root:[2025-01-31 18:37:22]
+root:[2025-01-31 18:37:23] User connected, IP(172.20.0.1), Port(59452)
+root:[2025-01-31 18:37:25] cd ..
+root:[2025-01-31 18:37:28] cd var/log
+root:[2025-01-31 18:37:41] echo "sovrascrivo" > ssh_honeypot_history
+root:[2025-01-31 18:37:44] User disconnected, IP(172.20.0.1), Port(59452)

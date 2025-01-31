@@ -8,10 +8,22 @@ services:
       - ./config/ssh/banner.txt:/etc/ssh/banner.txt
       - ./config/ssh/bash_wrapper.sh:/bin/bash_wrapper.sh
       - ./logs:/var/log 
+      - ssh_logs:/var/log  # Condivide i log con il container di logging
     restart: always
     networks:
       - honeynet
 
+  ssh_logger:
+    image: debian:bullseye
+    container_name: ssh_logger
+    volumes:
+      - ssh_logs:/var/log  # Monta i log in sola lettura
+    command: /bin/sh -c "touch /var/log/ssh_honeypot_history.log && tail -F /var/log/ssh_honeypot_history.log | tee /var/log/ssh_honeypot_history_copy.log"
+
 networks:
   honeynet:
     driver: bridge
+
+volumes:
+  ssh_logs:
+    driver: local
