@@ -1,0 +1,31 @@
+services:
+  ssh_vuln:
+    build: .
+    ports:
+      - "2222:22"   # Map port 2222 on the host to port 22 in the container (SSH)
+    container_name: ssh_vuln
+    volumes:
+      - ./config/ssh/banner.txt:/etc/ssh/banner.txt
+      - ./config/ssh/bash_wrapper.sh:/bin/bash_wrapper.sh
+      - ssh_logs:/var/log  # Use a named volume for logs
+    restart: always
+    networks:
+      - honeynet
+
+  ssh_logger:
+    image: debian:bullseye
+    container_name: ssh_logger
+    volumes:
+      - ssh_logs:/var/log  # Use the same named volume for logs
+      - ./secure_logs:/secure_logs  # Mount a separate directory for secure logs
+    command: /bin/sh -c "touch /var/log/ssh_honeypot_history.log && tail -F /var/log/ssh_honeypot_history.log | tee /secure_logs/ssh_honeypot_history_copy.log"
+    networks:
+      - honeynet
+
+networks:
+  honeynet:
+    driver: bridge
+
+volumes:
+  ssh_logs:
+    driver: local

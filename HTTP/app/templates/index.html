@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Honeypot HTTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+        }
+        form {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #5c6bc0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3f51b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sicuramente non un Honeypot (HTTP version)</h1>
+        <form action="/search" method="get">
+            <input type="text" name="q" placeholder="Cerca utenti">
+            <button type="submit">Cerca</button>
+        </form>
+
+        <h1>Comments Section</h1>
+        <form action="/" method="POST">
+            <label for="comment">Comment:</label>
+            <input type="text" id="comment" name="comment" required>
+            <button type="submit">Submit</button>
+        </form>
+        <h2>Comments:</h2>
+        <ul>
+            {% for comment in comments %}
+                <li>{{ comment|safe }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

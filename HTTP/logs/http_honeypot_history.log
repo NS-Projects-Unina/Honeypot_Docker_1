@@ -1,0 +1,12 @@
+2025-02-02 12:11:31,968 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.21.0.3:5000
+2025-02-02 12:11:31,969 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-02 12:12:02,241 - INFO - Request: GET / - IP: 172.21.0.1 - Data: b''
+2025-02-02 12:12:02,242 - INFO - Index page accessed
+2025-02-02 12:12:02,303 - INFO - 172.21.0.1 - - [02/Feb/2025 12:12:02] "GET / HTTP/1.1" 200 -
+2025-02-02 12:12:06,482 - INFO - Request: GET /search - IP: 172.21.0.1 - Data: b''
+2025-02-02 12:12:06,502 - INFO - [DEBUG] Query eseguita: SELECT * FROM users WHERE username LIKE 'admin'
+2025-02-02 12:12:06,511 - INFO - [DEBUG] Risultato query: [<sqlite3.Row object at 0x7fa4431eb030>]
+2025-02-02 12:12:06,555 - INFO - 172.21.0.1 - - [02/Feb/2025 12:12:06] "GET /search?q=admin HTTP/1.1" 200 -

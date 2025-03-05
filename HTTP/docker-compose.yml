@@ -1,0 +1,30 @@
+services:
+  honeypot:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app:ro  # Mount the app directory as read-only
+      - http_logs:/var/log  # Ensure this path matches the logging path
+    restart: always
+    networks:
+      - honeynet
+    read_only: true  # Make the file system read-only
+
+  http_logger:
+    image: debian:bullseye
+    container_name: http_logger
+    volumes:
+      - http_logs:/var/log  # Ensure this path matches the logging path
+      - ./secure_logs:/secure_logs  # Mount a separate directory for secure logs
+    command: /bin/sh -c "touch /var/log/http_honeypot_history.log && tail -F /var/log/http_honeypot_history.log | tee /secure_logs/http_honeypot_history_copy.log"
+    networks:
+      - honeynet
+
+networks:
+  honeynet:
+    driver: bridge
+
+volumes:
+  http_logs:
+    driver: local
