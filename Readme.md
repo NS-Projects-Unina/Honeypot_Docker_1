@@ -1,26 +1,6 @@
 # Progetto Honeypot Docker
 Questo progetto consiste in due honeypot: un honeypot HTTP e un honeypot SSH. Lo scopo di questi honeypot è attirare e registrare attività dannose per scopi di analisi e ricerca.
 
-## Struttura
-├── HTTP
-│ ├── app 
-│ │ ├── templates 
-│ │ │ ├── index.html 
-│ │ │ └── search_results.html 
-│ │ ├── app.py 
-│ │ ├── init_db.py 
-│ │ └── requirements.txt 
-│ ├── Dockerfile 
-│ └── docker-compose.yml 
-├── SSH 
-│ ├── config 
-│ │ └── ssh 
-│ │ ├── banner.txt 
-│ │ └── bash_wrapper.sh 
-│ ├── Dockerfile 
-│ └── docker-compose.yml 
-└── README.md
-
 ## Honeypot HTTP
 
 ### Descrizione
