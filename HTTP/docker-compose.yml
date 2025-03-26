@@ -5,7 +5,7 @@ services:
       - "5000:5000"
     volumes:
       - ./app:/app:ro  # Mount the app directory as read-only
-      - http_logs:/var/log  # Ensure this path matches the logging path
+      - http_logs:/var/log
     restart: always
     networks:
       - honeynet
@@ -15,7 +15,7 @@ services:
     image: debian:bullseye
     container_name: http_logger
     volumes:
-      - http_logs:/var/log  # Ensure this path matches the logging path
+      - http_logs:/var/log
       - ./secure_logs:/secure_logs  # Mount a separate directory for secure logs
     command: /bin/sh -c "touch /var/log/http_honeypot_history.log && tail -F /var/log/http_honeypot_history.log | tee /secure_logs/http_honeypot_history_copy.log"
     networks:

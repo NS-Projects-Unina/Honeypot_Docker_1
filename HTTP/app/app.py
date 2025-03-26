@@ -16,7 +16,7 @@ logging.basicConfig(
 
 @app.before_request
 def log_request():
-    logging.info(f"Request: {request.method} {request.path} - IP: {request.remote_addr} - Data: {request.data}")
+    logging.info(f"Request: {request.method} {request.path} - IP: {request.remote_addr}")
 
 # Connessione al database SQLite
 def get_db_connection():
@@ -32,7 +32,7 @@ def search():
     conn = get_db_connection()
     cur = conn.cursor()
 
-    sql_query = f"SELECT * FROM users WHERE username LIKE '{query}'"
+    sql_query = f"SELECT * FROM transactions WHERE user_id LIKE '{query}'"
     logging.info(f"Query eseguita: {sql_query}")  # LOG DELLA QUERY
     try:
         cur.execute(sql_query)  # VULNERABILE A SQLi

@@ -85,12 +85,12 @@
             <p>Non sei loggato.</p>
         {% endif %}
         <form action="/search" method="get">
-            <input type="text" name="q" placeholder="Cerca utenti">
+            <input type="text" name="q" placeholder="Cerca transazione">
             <button type="submit">Cerca</button>
         </form>
 
         <div class="comments-section">
-            <h1>Comments Section</h1>
+            <h1>Sezione Commenti:</h1>
             {% if error %}
                 <div class="error-message">{{ error }}</div>
             {% endif %}

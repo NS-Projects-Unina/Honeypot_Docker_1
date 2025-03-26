@@ -1,20 +1,10 @@
-root:[2025-02-02 13:54:15] cd var/log
-root:[2025-02-02 13:54:17] ls
-root:[2025-02-02 13:54:31] del ssh_honeypot_history_copy.log
-root:[2025-02-02 13:54:38] rm ssh_honeypot_history_copy.log
-root:[2025-02-02 13:54:40] ls
-root:[2025-02-02 13:54:48] cd ssh_honeypot_history
-root:[2025-02-02 13:54:56] rm ssh_honeypot_history
-root:[2025-02-02 13:54:59] ls
-root:[2025-02-02 13:55:07] test 04
-root:[2025-02-02 13:55:10] User disconnected, IP(172.22.0.1), Port(38272)
-root:[2025-02-02 14:00:34]
-root:[2025-02-02 14:00:34] User connected, IP(172.22.0.1), Port(35000)
-root:[2025-02-02 14:00:37] test 05
-root:[2025-02-02 14:00:41] cd ..
-root:[2025-02-02 14:00:44] cd var/log
-root:[2025-02-02 14:00:46] ls
-root:[2025-02-02 14:00:59] rm ssh_honeypot_history.log
-root:[2025-02-02 14:01:03] ls
-root:[2025-02-02 14:01:12] okay ritorna
-root:[2025-02-02 14:01:16] ggwp
+root:[2025-03-11 12:03:47] test
+root:[2025-03-11 12:03:49] User disconnected, IP(172.22.0.1), Port(50028)
+admin1:[2025-03-11 12:03:56]
+admin1:[2025-03-11 12:03:56] User connected, IP(172.22.0.1), Port(48398)
+admin1:[2025-03-11 12:05:55]
+admin1:[2025-03-11 12:05:55] User connected, IP(172.22.0.1), Port(56754)
+admin1:[2025-03-11 12:05:56] User disconnected, IP(172.22.0.1), Port(56754)
+root:[2025-03-11 12:05:59]
+root:[2025-03-11 12:05:59] User connected, IP(172.22.0.1), Port(59718)
+root:[2025-03-11 12:06:06]
