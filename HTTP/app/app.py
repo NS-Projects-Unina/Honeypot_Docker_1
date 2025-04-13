@@ -32,7 +32,7 @@ def search():
     conn = get_db_connection()
     cur = conn.cursor()
 
-    sql_query = f"SELECT * FROM transactions WHERE user_id LIKE '{query}'"
+    sql_query = f"SELECT * FROM users WHERE id LIKE '{query}'"
     logging.info(f"Query eseguita: {sql_query}")  # LOG DELLA QUERY
     try:
         cur.execute(sql_query)  # VULNERABILE A SQLi

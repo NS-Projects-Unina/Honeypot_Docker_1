@@ -6,8 +6,8 @@ log_file = "/var/log/ssh/ssh.log"
 output_file = "/var/log/ssh_honeypot_history.log"
 
 # Compila le espressioni regolari per individuare i pattern di connessione e disconnessione nel file di log
-connection_pattern = re.compile(r".*Accepted password for (\\w+).*")
-disconnection_pattern = re.compile(r".*Close session: user (\\w+).*")
+connection_pattern = re.compile(r".*Accepted password for *")
+disconnection_pattern = re.compile(r".*Close session: user *")
 
 # Apri il file di log in modalità lettura e il file di output in modalità append
 with open(log_file, "r") as log, open(output_file, "a") as out:

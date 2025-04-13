@@ -1,30 +1,45 @@
-[2025-03-11 14:53:57,103] - INFO - 172.21.0.1 - - [11/Mar/2025 14:53:57] "GET / HTTP/1.1" 200 -
-[2025-03-11 15:02:41,143] - INFO - Request: GET /search - IP: 172.21.0.1 - Data: b''
-[2025-03-11 15:02:41,170] - INFO - Query eseguita: SELECT * FROM users WHERE username LIKE 'test'
-[2025-03-11 15:02:41,255] - INFO - 172.21.0.1 - - [11/Mar/2025 15:02:41] "GET /search?q=test HTTP/1.1" 200 -
-[2025-03-11 15:02:45,659] - INFO - Request: GET /search - IP: 172.21.0.1 - Data: b''
-[2025-03-11 15:02:45,682] - INFO - Query eseguita: SELECT * FROM users WHERE username LIKE 'test'
-[2025-03-11 15:02:45,697] - INFO - 172.21.0.1 - - [11/Mar/2025 15:02:45] "GET /search?q=test HTTP/1.1" 200 -
-[2025-03-11 15:03:04,729] - INFO - Request: GET /search - IP: 172.21.0.1 - Data: b''
-[2025-03-11 15:03:04,737] - INFO - Query eseguita: SELECT * FROM users WHERE username LIKE 'admin'
-[2025-03-11 15:03:04,756] - INFO - 172.21.0.1 - - [11/Mar/2025 15:03:04] "GET /search?q=admin HTTP/1.1" 200 -
-[2025-03-11 15:33:04,000] - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.21.0.2:5000
+[2025-04-13 15:20:57,110] - INFO - [33mPress CTRL+C to quit[0m
+[2025-04-13 15:21:01,640] - INFO - Request: GET / - IP: 172.21.0.1
+[2025-04-13 15:21:01,640] - INFO - Pagina principale visitata
+[2025-04-13 15:21:01,892] - INFO - 172.21.0.1 - - [13/Apr/2025 15:21:01] "GET / HTTP/1.1" 200 -
+[2025-04-13 15:21:06,340] - INFO - Request: GET /search - IP: 172.21.0.1
+[2025-04-13 15:21:06,358] - INFO - Query eseguita: SELECT * FROM users WHERE user_id LIKE '1'
+[2025-04-13 15:21:06,383] - ERROR - Errore: no such column: user_id
+[2025-04-13 15:21:06,391] - INFO - 172.21.0.1 - - [13/Apr/2025 15:21:06] "GET /search?q=1 HTTP/1.1" 200 -
+[2025-04-13 15:21:43,006] - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
- * Running on http://172.21.0.3:5000
-[2025-03-11 15:33:04,000] - INFO - [33mPress CTRL+C to quit[0m
-[2025-03-11 15:33:17,922] - INFO - Request: GET / - IP: 172.21.0.1
-[2025-03-11 15:33:17,922] - INFO - Pagina principale visitata
-[2025-03-11 15:33:18,454] - INFO - 172.21.0.1 - - [11/Mar/2025 15:33:18] "GET / HTTP/1.1" 200 -
-[2025-03-11 15:33:25,361] - INFO - Request: GET /search - IP: 172.21.0.1
-[2025-03-11 15:33:25,382] - INFO - Query eseguita: SELECT * FROM users WHERE username LIKE 'admin'
-[2025-03-11 15:33:25,417] - INFO - 172.21.0.1 - - [11/Mar/2025 15:33:25] "GET /search?q=admin HTTP/1.1" 200 -
-[2025-03-11 15:33:34,699] - INFO - Request: POST /login - IP: 172.21.0.1
-[2025-03-11 15:33:34,707] - INFO - 172.21.0.1 - - [11/Mar/2025 15:33:34] "[32mPOST /login HTTP/1.1[0m" 302 -
-[2025-03-11 15:33:34,722] - INFO - Request: GET / - IP: 172.21.0.1
-[2025-03-11 15:33:34,722] - INFO - Pagina principale visitata
-[2025-03-11 15:33:35,211] - INFO - 172.21.0.1 - - [11/Mar/2025 15:33:35] "GET / HTTP/1.1" 200 -
-[2025-03-11 15:33:48,360] - INFO - Request: POST / - IP: 172.21.0.1
-[2025-03-11 15:33:48,360] - INFO - Pagina principale visitata
-[2025-03-11 15:33:48,828] - INFO - New comment added: admin: sto postando un commento
-[2025-03-11 15:33:48,829] - INFO - 172.21.0.1 - - [11/Mar/2025 15:33:48] "POST / HTTP/1.1" 200 -
+ * Running on http://172.21.0.2:5000
+[2025-04-13 15:21:43,006] - INFO - [33mPress CTRL+C to quit[0m
+[2025-04-13 15:21:44,820] - INFO - Request: GET / - IP: 172.21.0.1
+[2025-04-13 15:21:44,820] - INFO - Pagina principale visitata
+[2025-04-13 15:21:45,014] - INFO - 172.21.0.1 - - [13/Apr/2025 15:21:45] "GET / HTTP/1.1" 200 -
+[2025-04-13 15:21:47,188] - INFO - Request: GET /search - IP: 172.21.0.1
+[2025-04-13 15:21:47,205] - INFO - Query eseguita: SELECT * FROM users WHERE id LIKE '1'
+[2025-04-13 15:21:47,267] - INFO - 172.21.0.1 - - [13/Apr/2025 15:21:47] "GET /search?q=1 HTTP/1.1" 200 -
+[2025-04-13 15:22:38,095] - INFO - Request: GET /search - IP: 172.21.0.1
+[2025-04-13 15:22:38,104] - INFO - Query eseguita: SELECT * FROM users WHERE id LIKE '1'
+[2025-04-13 15:22:38,116] - INFO - 172.21.0.1 - - [13/Apr/2025 15:22:38] "GET /search?q=1 HTTP/1.1" 200 -
+[2025-04-13 15:23:52,112] - INFO - Request: POST /login - IP: 172.21.0.1
+[2025-04-13 15:23:52,113] - INFO - 172.21.0.1 - - [13/Apr/2025 15:23:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2025-04-13 15:23:52,127] - INFO - Request: GET / - IP: 172.21.0.1
+[2025-04-13 15:23:52,127] - INFO - Pagina principale visitata
+[2025-04-13 15:23:52,332] - INFO - 172.21.0.1 - - [13/Apr/2025 15:23:52] "GET / HTTP/1.1" 200 -
+[2025-04-13 15:24:19,156] - INFO - Request: POST / - IP: 172.21.0.1
+[2025-04-13 15:24:19,156] - INFO - Pagina principale visitata
+[2025-04-13 15:24:19,456] - INFO - New comment added: admin: <script>alert("CIAO"); </script>
+[2025-04-13 15:24:19,457] - INFO - 172.21.0.1 - - [13/Apr/2025 15:24:19] "POST / HTTP/1.1" 200 -
+[2025-04-13 15:24:37,220] - INFO - Request: POST / - IP: 172.21.0.1
+[2025-04-13 15:24:37,221] - INFO - Pagina principale visitata
+[2025-04-13 15:24:37,392] - INFO - New comment added: admin: <script>alert("CIAO"); </script>
+[2025-04-13 15:24:37,392] - INFO - 172.21.0.1 - - [13/Apr/2025 15:24:37] "POST / HTTP/1.1" 200 -
+[2025-04-13 15:24:48,454] - INFO - Request: GET / - IP: 172.21.0.1
+[2025-04-13 15:24:48,454] - INFO - Pagina principale visitata
+[2025-04-13 15:24:48,645] - INFO - 172.21.0.1 - - [13/Apr/2025 15:24:48] "GET / HTTP/1.1" 200 -
+[2025-04-13 15:25:14,733] - INFO - Request: GET /logout - IP: 172.21.0.1
+[2025-04-13 15:25:14,734] - INFO - 172.21.0.1 - - [13/Apr/2025 15:25:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+[2025-04-13 15:25:14,741] - INFO - Request: GET / - IP: 172.21.0.1
+[2025-04-13 15:25:14,741] - INFO - Pagina principale visitata
+[2025-04-13 15:25:14,997] - INFO - 172.21.0.1 - - [13/Apr/2025 15:25:14] "GET / HTTP/1.1" 200 -

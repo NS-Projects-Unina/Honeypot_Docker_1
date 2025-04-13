@@ -11,4 +11,4 @@ export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "  # Puoi lasciare questo se vuoi, ma n
 trap 'echo \$(whoami): User disconnected >> /var/log/ssh_honeypot_history.log' EXIT
 
 # Avvia il comando bash
-exec /bin/bash
+exec /bin/bash "$@"
